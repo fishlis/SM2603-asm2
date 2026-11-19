@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://b470ecygadt01"]
+
+[ext_resource type="Script" uid="uid://dy2c18w2efah7" path="res://drawing_pad.gd" id="1_x367w"]
+[ext_resource type="PackedScene" uid="uid://beqcjunkseu5m" path="res://component_card.tscn" id="2_wqv57"]
+
+[node name="DrawingPad" type="Control" unique_id=1888209856]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x367w")
+component_scene = ExtResource("2_wqv57")
+threshold = 15.0
+record_code = "W"
+
+[node name="Canvas" type="Panel" parent="." unique_id=224659663]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -50.0
+offset_bottom = -52.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Line2D" type="Line2D" parent="." unique_id=1180683425]
+points = PackedVector2Array(883, 387)
+width = 6.0
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="ComponentSpawnPoint" type="Control" parent="." unique_id=1839016739]
+layout_mode = 1
+anchor_right = 0.035
+anchor_bottom = 0.031000001
+offset_left = 33.0
+offset_top = 604.0
+offset_right = 32.68
+offset_bottom = 623.912
+
+[node name="SubmitButton" type="Button" parent="." unique_id=1292205306]
+layout_mode = 0
+offset_left = 1055.0
+offset_top = 609.0
+offset_right = 1118.0
+offset_bottom = 640.0
+text = "Submit"
