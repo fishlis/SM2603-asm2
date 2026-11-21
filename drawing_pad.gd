@@ -21,14 +21,15 @@ var drawing = false
 var busy = false
 var points: PackedVector2Array = PackedVector2Array()
 var templates: Dictionary = {} 
+var current_line: Line2D = null
 
 @onready var line: Line2D = $Line2D
 @onready var spawn_point: Control = $ComponentSpawnPoint
 @onready var submit_btn: Button = $SubmitButton
+@onready var clear_btn: Button = $ClearButton
 
 func _ready() -> void:
 	load_templates()
-	submit_btn.pressed.connect(_on_submit_pressed)
 
 func _gui_input(event: InputEvent) -> void:
 	if busy:
@@ -36,22 +37,25 @@ func _gui_input(event: InputEvent) -> void:
 #only allow to draw once at the same time
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
-			drawing = true
-			points.clear()
-			line.clear_points()
+			current_line = Line2D.new()
+			current_line.width = 6.0
+			current_line.default_color = Color.WHITE
+			$Canvas.add_child(current_line)
 			add_pt(event.position)
 		else:
-			drawing = false
+			current_line = null
 #only checking the similarities when submit btn is pressed
-	elif event is InputEventMouseMotion and drawing:
-		add_pt(event.position)
+	elif event is InputEventMouseMotion and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		if current_line != null:
+			add_pt(event.position)
 
 func add_pt(pos: Vector2) -> void:
 	var p: Vector2 = line.to_local(get_global_mouse_position())
 	if points.size() > 0 and points[-1].distance_to(p) < 3.0:
 		return
 	points.append(p)
-	line.add_point(p)
+	if current_line:
+			current_line.add_point(p)
 
 func _on_submit_pressed() -> void:
 	if busy or points.size() < 5:
@@ -129,7 +133,11 @@ func bounce_reset() -> void:
 
 func clear_draw() -> void:
 	points.clear()
-	line.clear_points()
+	current_line = null
+	for child in $Canvas.get_children():
+		if child is Line2D:
+			child.queue_free()
+	busy = false
 
 func resample(pts: PackedVector2Array, n: int) -> PackedVector2Array:
 	var total: float = 0.0
@@ -220,3 +228,11 @@ func load_templates() -> void:
 				pv.append(Vector2(float(pair[0]), float(pair[1])))
 			arr.append(pv)
 		templates[code] = arr
+
+
+func _on_submit_button_pressed() -> void:
+	_on_submit_pressed()
+
+
+func _on_clear_button_pressed() -> void:
+	clear_draw()
