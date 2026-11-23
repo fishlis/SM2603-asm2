@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ddoh5m332l57h"]
 
 [ext_resource type="Script" uid="uid://dxq1qypxury3j" path="res://item_slot.gd" id="1_ki15f"]
+[ext_resource type="Script" uid="uid://bg68keqe78hq0" path="res://category_grid.gd" id="1_nwt7c"]
 [ext_resource type="Texture2D" uid="uid://j1lgb6kxie7p" path="res://Testing Assets/Icon1.png" id="2_nwt7c"]
 
 [node name="Inventory" type="Node" unique_id=1037336950]
@@ -24,18 +25,19 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Inventory" unique_id=2041039958]
+[node name="Category_grid" type="GridContainer" parent="CanvasLayer/Inventory" unique_id=2041039958]
 layout_mode = 2
 theme_override_constants/h_separation = 9
 theme_override_constants/v_separation = 8
 columns = 4
+script = ExtResource("1_nwt7c")
 
-[node name="ItemSlot" type="Panel" parent="CanvasLayer/Inventory/GridContainer" unique_id=2005584691]
+[node name="ItemSlot" type="Panel" parent="CanvasLayer/Inventory/Category_grid" unique_id=2005584691]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 script = ExtResource("1_ki15f")
 
-[node name="Icon" type="TextureRect" parent="CanvasLayer/Inventory/GridContainer/ItemSlot" unique_id=1559356948]
+[node name="Icon" type="TextureRect" parent="CanvasLayer/Inventory/Category_grid/ItemSlot" unique_id=1559356948]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -46,12 +48,12 @@ texture = ExtResource("2_nwt7c")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="ItemSlot2" type="Panel" parent="CanvasLayer/Inventory/GridContainer" unique_id=795177957]
+[node name="ItemSlot2" type="Panel" parent="CanvasLayer/Inventory/Category_grid" unique_id=795177957]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 script = ExtResource("1_ki15f")
 
-[node name="Icon" type="TextureRect" parent="CanvasLayer/Inventory/GridContainer/ItemSlot2" unique_id=78297758]
+[node name="Icon" type="TextureRect" parent="CanvasLayer/Inventory/Category_grid/ItemSlot2" unique_id=78297758]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -61,12 +63,12 @@ grow_vertical = 2
 expand_mode = 1
 stretch_mode = 4
 
-[node name="ItemSlot3" type="Panel" parent="CanvasLayer/Inventory/GridContainer" unique_id=288009570]
+[node name="ItemSlot3" type="Panel" parent="CanvasLayer/Inventory/Category_grid" unique_id=288009570]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 script = ExtResource("1_ki15f")
 
-[node name="Icon" type="TextureRect" parent="CanvasLayer/Inventory/GridContainer/ItemSlot3" unique_id=1131923290]
+[node name="Icon" type="TextureRect" parent="CanvasLayer/Inventory/Category_grid/ItemSlot3" unique_id=1131923290]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -76,12 +78,12 @@ grow_vertical = 2
 expand_mode = 1
 stretch_mode = 4
 
-[node name="ItemSlot4" type="Panel" parent="CanvasLayer/Inventory/GridContainer" unique_id=671077567]
+[node name="ItemSlot4" type="Panel" parent="CanvasLayer/Inventory/Category_grid" unique_id=671077567]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 script = ExtResource("1_ki15f")
 
-[node name="Icon" type="TextureRect" parent="CanvasLayer/Inventory/GridContainer/ItemSlot4" unique_id=2132050251]
+[node name="Icon" type="TextureRect" parent="CanvasLayer/Inventory/Category_grid/ItemSlot4" unique_id=2132050251]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

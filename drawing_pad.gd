@@ -1,14 +1,17 @@
 extends Control
 
+signal ingredient_added(category: String, item_name: String, item_color: Color, item_icon: Texture2D)
+
 const ITEM_DATA = {
-	"C": {"category": "coffee", "name": "Coffee", "icon": preload("res://assets/coffee_icons/espresso_cup.png")},
-	"W": {"category": "water",  "name": "Water", "icon": preload("res://assets/coffee_icons/americano_cup.png")},
-	"M": {"category": "water",  "name": "Milk",   "icon": preload("res://assets/coffee_icons/caramel_latte_cup.png")},
-	"V": {"category": "syrup",  "name": "Vanilla Syrup",  "icon": preload("res://assets/coffee_icons/vanilla_latte_cup.png")},
-	"K": {"category": "syrup",  "name": "Caramel Syrup",  "icon": preload("res://assets/coffee_icons/caramel_latte_cup.png")},
-	"H": {"category": "syrup",  "name": "Hazelnut Syrup", "icon": preload("res://assets/coffee_icons/hazelnut_latte_cup.png")},
-	"X": {"category": "syrup",  "name": "Chocolate",      "icon": preload("res://assets/coffee_icons/mocha_cup.png")},
-	"I": {"category": "ice",    "name": "Ice",    "icon": preload("res://assets/coffee_icons/ice.png")},
+	"C": {"category": "coffee", "name": "Coffee", "color": Color("8b5a2b"),"icon": preload("res://assets/coffee_icons/espresso_cup.png")},
+	"W": {"category": "water",  "name": "Water", "color": Color("7ec8e3"),"icon": preload("res://assets/coffee_icons/americano_cup.png")},
+	"M": {"category": "water",  "name": "Milk",   "color": Color("f5f5f5"),"icon": preload("res://assets/coffee_icons/caramel_latte_cup.png")},
+	"V": {"category": "syrup",  "name": "Vanilla Syrup",  "color": Color("f3e5ab"),"icon": preload("res://assets/coffee_icons/vanilla_latte_cup.png")},
+	"K": {"category": "syrup",  "name": "Caramel Syrup", "color": Color("ffa500"), "icon": preload("res://assets/coffee_icons/caramel_latte_cup.png")},
+	"H": {"category": "syrup",  "name": "Hazelnut Syrup","color": Color("c19a6b"), "icon": preload("res://assets/coffee_icons/hazelnut_latte_cup.png")},
+	"X": {"category": "syrup",  "name": "Chocolate",     "color": Color("6f4e37"), "icon": preload("res://assets/coffee_icons/mocha_cup.png")},
+	"I": {"category": "ice",    "name": "Ice",   "color": Color("bfefff"), "icon": preload("res://assets/coffee_icons/ice.png")},
+	"OM":{"category": "ice",	"name": "Oat Milk",	"color": Color("e6ccb2"),"icon": preload("res://assets/coffee_icons/oatmilk_latte_cup.png")}
 }
 
 @export var component_scene: PackedScene
@@ -101,6 +104,13 @@ func find_match(input_pts: PackedVector2Array) -> String:
 
 #spawning the corresponding letter code once it is recognised
 func spawn_component(code: String) -> void:
+	var info: Dictionary = ITEM_DATA.get(code,{})
+	var category: String = str(info.get("category" ,code))
+	var ingredient_name: String = str(info.get("name", code))
+	var ingredient_color: Color = info.get("color", Color.WHITE)
+	var ingredient_icon: Texture2D = info.get("icon", null)
+	
+	ingredient_added.emit(category, ingredient_name, ingredient_color, ingredient_icon)
 	if component_scene == null:
 		print("Got: ", code, " - ", ITEM_DATA.get(code, ""))
 		return
@@ -115,8 +125,6 @@ func spawn_component(code: String) -> void:
 
 #referencing the componentName.gd function
 	if item.has_method("setup_component"):
-		var info: Dictionary = ITEM_DATA.get(code, {})
-		var ingredient_name: String = str(info.get("name", code))
 		item.setup_component(code, ingredient_name)
 
 # Wrong detections of drawing will be erased and the canvas bounce for feedback
