@@ -10,7 +10,7 @@ extends GridContainer
 func update_category_slot(category: String, item_name: String, item_color: Color, item_icon: Texture2D)-> void:
 	var slot = category_slots.get(category, null)
 	if slot and slot.has_method("set_slot_data"):
-		slot.set_slot_data(item_icon, item_color, item_name)
+		slot.set_slot_data(item_icon, item_color, item_name, category)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

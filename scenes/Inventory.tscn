@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dxq1qypxury3j" path="res://script/item_slot.gd" id="1_ki15f"]
 [ext_resource type="Texture2D" uid="uid://b2pdscobero6l" path="res://assets/Cozy-UI-Kit-NS-Studio/Cozy-UI-Kit/PNG-2x/panels/panel_cream.png" id="1_njucy"]
 [ext_resource type="Script" uid="uid://bg68keqe78hq0" path="res://script/category_grid.gd" id="1_nwt7c"]
-[ext_resource type="Texture2D" uid="uid://j1lgb6kxie7p" path="res://Testing Assets/Icon1.png" id="2_nwt7c"]
 
 [node name="Inventory" type="Node" unique_id=1037336950]
 
@@ -58,12 +57,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_nwt7c")
 expand_mode = 1
 stretch_mode = 4
 
 [node name="ItemSlot2" type="Panel" parent="CanvasLayer/Inventory/Category_grid" unique_id=795177957]
-visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 script = ExtResource("1_ki15f")

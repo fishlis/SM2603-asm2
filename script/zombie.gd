@@ -5,6 +5,7 @@ extends RigidBody2D
 
 
 @onready var patience_bar = $PatienceBar
+@onready var order_overlay = $OrderOverlay
 
 #ORDER Variables
 @export var wait_time: float = 15.0
@@ -27,9 +28,47 @@ func _process(delta: float) -> void:
 	if remaining_time <= 0.0:
 		order_failed()
 
-
+func check_cup(items: Array) -> bool:
+	if order_overlay == null:
+		return false
+		
+	var order_id: String = str(order_overlay.current_order_id)
+	
+	var has_coffee = "Coffee" in items
+	var has_milk = "Milk" in items or "Oat Milk" in items
+	var has_water = "Water" in items
+	var has_choc = "Chocolate" in items
+	var has_caramel = "Caramel Syrup" in items
+	var has_vanilla = "Vanilla Syrup" in items
+	var has_hazelnut = "Hazelnut Syrup" in items
+	
+	var is_ok = false
+	if "mocha" in order_id:
+		is_ok = has_coffee and has_choc
+	elif "caramel_latte" in order_id:
+		is_ok = has_coffee and has_milk and has_caramel
+	elif "vanilla_latte" in order_id:
+		is_ok = has_coffee and has_milk and has_vanilla
+	elif "hazelnut_latte" in order_id:
+		is_ok = has_coffee and has_milk and has_hazelnut
+	elif "latte" in order_id:
+		is_ok = has_coffee and has_milk
+	elif "americano" in order_id:
+		is_ok = has_coffee and has_water
+	elif "espresso" in order_id:
+		is_ok = has_coffee and not has_milk and not has_choc
+	
+	if is_ok:
+		print("matched!")
+		drinkOrder()
+		return true
+	else:
+		print("not match", items)
+		return false
+	
 func drinkOrder() -> void:
-	pass
+	print("Order complted!")
+	queue_free()
 
 func order_failed() -> void:
 	queue_free()
