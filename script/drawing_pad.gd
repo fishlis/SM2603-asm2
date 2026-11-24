@@ -3,15 +3,15 @@ extends Control
 signal ingredient_added(category: String, item_name: String, item_color: Color, item_icon: Texture2D)
 
 const ITEM_DATA = {
-	"C": {"category": "coffee", "name": "Coffee", "color": Color("8b5a2b"),"icon": preload("res://assets/coffee_icons/espresso_cup.png")},
-	"W": {"category": "water",  "name": "Water", "color": Color("7ec8e3"),"icon": preload("res://assets/coffee_icons/americano_cup.png")},
-	"M": {"category": "water",  "name": "Milk",   "color": Color("f5f5f5"),"icon": preload("res://assets/coffee_icons/caramel_latte_cup.png")},
-	"V": {"category": "syrup",  "name": "Vanilla Syrup",  "color": Color("f3e5ab"),"icon": preload("res://assets/coffee_icons/vanilla_latte_cup.png")},
-	"K": {"category": "syrup",  "name": "Caramel Syrup", "color": Color("ffa500"), "icon": preload("res://assets/coffee_icons/caramel_latte_cup.png")},
-	"H": {"category": "syrup",  "name": "Hazelnut Syrup","color": Color("c19a6b"), "icon": preload("res://assets/coffee_icons/hazelnut_latte_cup.png")},
-	"X": {"category": "syrup",  "name": "Chocolate",     "color": Color("6f4e37"), "icon": preload("res://assets/coffee_icons/mocha_cup.png")},
-	"I": {"category": "ice",    "name": "Ice",   "color": Color("bfefff"), "icon": preload("res://assets/coffee_icons/ice.png")},
-	"OM":{"category": "ice",	"name": "Oat Milk",	"color": Color("e6ccb2"),"icon": preload("res://assets/coffee_icons/oatmilk_latte_cup.png")}
+	"C": {"category": "coffee", "name": "Coffee", "color": Color("8b5a2b"),"icon": preload("res://assets/coffee_icons/orders/espresso_cup.png")},
+	"W": {"category": "water",  "name": "Water", "color": Color("7ec8e3"),"icon": preload("res://assets/coffee_icons/orders/americano_cup.png")},
+	"M": {"category": "water",  "name": "Milk",   "color": Color("f5f5f5"),"icon": preload("res://assets/coffee_icons/orders/caramel_latte_cup.png")},
+	"V": {"category": "syrup",  "name": "Vanilla Syrup",  "color": Color("f3e5ab"),"icon": preload("res://assets/coffee_icons/orders/vanilla_latte_cup.png")},
+	"K": {"category": "syrup",  "name": "Caramel Syrup", "color": Color("ffa500"), "icon": preload("res://assets/coffee_icons/orders/caramel_latte_cup.png")},
+	"H": {"category": "syrup",  "name": "Hazelnut Syrup","color": Color("c19a6b"), "icon": preload("res://assets/coffee_icons/orders/hazelnut_latte_cup.png")},
+	"X": {"category": "syrup",  "name": "Chocolate",     "color": Color("6f4e37"), "icon": preload("res://assets/coffee_icons/orders/mocha_cup.png")},
+	"I": {"category": "ice",    "name": "Ice",   "color": Color("bfefff"), "icon": preload("res://assets/coffee_icons/less_ice.png")},
+	"OM":{"category": "ice",	"name": "Oat Milk",	"color": Color("e6ccb2"),"icon": preload("res://assets/coffee_icons/orders/oatmilk_latte_cup.png")}
 }
 
 @export var component_scene: PackedScene
@@ -214,14 +214,14 @@ func save_templates() -> void:
 				pts_list.append([p.x, p.y])
 			arr.append(pts_list)
 		data[code] = arr
-	var f = FileAccess.open("user://templates.json", FileAccess.WRITE)
+	var f = FileAccess.open("res://templates.json", FileAccess.WRITE)
 	if f:
 		f.store_string(JSON.stringify(data))
 
 func load_templates() -> void:
-	if not FileAccess.file_exists("user://templates.json"):
+	if not FileAccess.file_exists("res://templates.json"):
 		return
-	var f = FileAccess.open("user://templates.json", FileAccess.READ)
+	var f = FileAccess.open("res://templates.json", FileAccess.READ)
 	if not f:
 		return
 	var parsed = JSON.parse_string(f.get_as_text())

@@ -1,9 +1,17 @@
 [gd_scene format=3 uid="uid://1anc16fj70pe"]
 
 [ext_resource type="Texture2D" uid="uid://coltg8wmal8u3" path="res://assets/zombies/boy1.png" id="1_4gx57"]
+[ext_resource type="Script" uid="uid://c0bfrn74flbql" path="res://script/zombie.gd" id="1_ycv6i"]
 [ext_resource type="Texture2D" uid="uid://dc76bppfoe3oo" path="res://assets/zombies/boy2.png" id="2_ycv6i"]
 [ext_resource type="Texture2D" uid="uid://bmse0wbo0muy8" path="res://assets/zombies/girl1.png" id="3_pjjxt"]
 [ext_resource type="Texture2D" uid="uid://djgj4d5thqqdr" path="res://assets/zombies/girl2.png" id="4_7pfmu"]
+[ext_resource type="Texture2D" uid="uid://bqs63fw7jqupv" path="res://assets/UI/progress-bar-circle.png" id="6_3fthk"]
+[ext_resource type="Texture2D" uid="uid://ci116hjnxfjgk" path="res://assets/UI/progress-bar-frame.png" id="7_aetfh"]
+[ext_resource type="Script" uid="uid://dpk08i1rqavrv" path="res://script/patience_bar.gd" id="8_jjlcg"]
+[ext_resource type="Script" uid="uid://cc16pt7pkgkxj" path="res://script/order_overlay.gd" id="9_jjlcg"]
+[ext_resource type="Texture2D" uid="uid://d3c7o11bwyo04" path="res://assets/UI/speech_bubble.png" id="10_iblsu"]
+[ext_resource type="Texture2D" uid="uid://qroex370cwst" path="res://assets/coffee_icons/orders/mocha_togo.png" id="11_ida1p"]
+[ext_resource type="Texture2D" uid="uid://d3p53518gw14c" path="res://assets/coffee_icons/orders/espresso_cup.png" id="11_u6hpf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3fthk"]
 atlas = ExtResource("1_4gx57")
@@ -1992,16 +2000,101 @@ animations = [{
 radius = 125.0
 height = 308.0
 
-[node name="Zombie" type="Area2D" unique_id=1314571169]
+[node name="Zombie" type="RigidBody2D" unique_id=1857117241]
+visibility_layer = 2
+scale = Vector2(0.02, 0.02)
+collision_layer = 2
+mass = 0.001
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_ycv6i")
+wait_time = 30.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1959575367]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=561262226]
+visibility_layer = 2
 texture_repeat = 2
-position = Vector2(145.5, 152.5)
+position = Vector2(0, -91.01)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_fxvt1")
 animation = &"boy2"
-frame_progress = 0.25883582
+frame = 16
+frame_progress = 0.50084805
 speed_scale = 6.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D" unique_id=1984914412]
-position = Vector2(1.5, 1.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2126133948]
+position = Vector2(0, -100)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("CapsuleShape2D_sc85n")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=710106713]
+
+[node name="PatienceBar" type="TextureProgressBar" parent="." unique_id=1515096053]
+offset_left = 50.0
+offset_top = -200.0
+offset_right = 178.0
+offset_bottom = -72.0
+scale = Vector2(0.5, 0.5)
+value = 33.0
+fill_mode = 4
+texture_under = ExtResource("6_3fthk")
+texture_over = ExtResource("7_aetfh")
+texture_progress = ExtResource("6_3fthk")
+tint_under = Color(0.13725491, 0.1764706, 0.1764706, 0.65882355)
+tint_progress = Color(0.09019608, 0.80784315, 0.32941177, 1)
+script = ExtResource("8_jjlcg")
+metadata/_edit_use_anchors_ = true
+
+[node name="OrderOverlay" type="Node2D" parent="." unique_id=2077959638]
+script = ExtResource("9_jjlcg")
+
+[node name="SpeechBubble" type="TextureRect" parent="OrderOverlay" unique_id=300191499]
+offset_left = -280.99057
+offset_top = -327.68353
+offset_right = -54.128967
+offset_bottom = -127.59393
+texture = ExtResource("10_iblsu")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="OrderIcon" type="TextureRect" parent="OrderOverlay" unique_id=554416583]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -218.70547
+offset_top = -327.1223
+offset_right = 83.246796
+offset_bottom = 231.02856
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("11_ida1p")
+expand_mode = 5
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="EspressoCup" type="Sprite2D" parent="OrderOverlay" unique_id=873987313]
+visible = false
+position = Vector2(-127.44259, -203.42233)
+scale = Vector2(0.37417665, 0.37417647)
+texture = ExtResource("11_u6hpf")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="OrderOverlay" unique_id=1967335753]
+visible = false
+anchors_preset = -1
+offset_left = -346.62756
+offset_top = -383.59375
+offset_right = 350.80066
+offset_bottom = 520.46484
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.205, 0.205)
+texture = ExtResource("10_iblsu")
+region_rect = Rect2(0, 0, 843.7908, 1129.2521)
+patch_margin_left = 125
+patch_margin_top = 125
+patch_margin_right = 125
+patch_margin_bottom = 270
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

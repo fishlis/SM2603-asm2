@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://v74na8ihflt4"]
+
+[ext_resource type="Texture2D" uid="uid://bqs63fw7jqupv" path="res://assets/UI/progress-bar-circle.png" id="1_m1aj7"]
+[ext_resource type="Script" uid="uid://p61j10wwetbu" path="res://scenes/UI/patience_bar.gd" id="1_tnaa0"]
+[ext_resource type="Texture2D" uid="uid://ci116hjnxfjgk" path="res://assets/UI/progress-bar-frame.png" id="2_tnaa0"]
+
+[node name="PatienceBar" type="Control" unique_id=1835332961]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tnaa0")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1120502685]
+layout_mode = 0
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+value = 33.0
+fill_mode = 4
+texture_under = ExtResource("1_m1aj7")
+texture_over = ExtResource("2_tnaa0")
+texture_progress = ExtResource("1_m1aj7")
+tint_under = Color(0.13725491, 0.1764706, 0.1764706, 0.65882355)
+tint_progress = Color(0.09019608, 0.80784315, 0.32941177, 1)
