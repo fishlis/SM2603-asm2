@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://beqcjunkseu5m"]
 
-[ext_resource type="Script" uid="uid://p2vuyb46nt0d" path="res://componentName.gd" id="1_jwqnp"]
+[ext_resource type="Script" uid="uid://p2vuyb46nt0d" path="res://script/componentName.gd" id="1_jwqnp"]
 
 [node name="Component Card" type="Control" unique_id=648323745]
 custom_minimum_size = Vector2(120, 120)

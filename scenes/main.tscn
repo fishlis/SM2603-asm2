@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://b2p11o4c8u0ys"]
 
-[ext_resource type="Script" uid="uid://cjmqvbd2dpavr" path="res://main.gd" id="1_h2yge"]
-[ext_resource type="PackedScene" uid="uid://b470ecygadt01" path="res://drawing_pad.tscn" id="2_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://ddoh5m332l57h" path="res://Inventory.tscn" id="3_lquwl"]
+[ext_resource type="Script" uid="uid://cjmqvbd2dpavr" path="res://script/main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://b470ecygadt01" path="res://scenes/drawing_pad.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://ddoh5m332l57h" path="res://scenes/Inventory.tscn" id="3_lquwl"]
 
 [node name="Main" type="Node2D" unique_id=274516228]
 script = ExtResource("1_h2yge")
@@ -12,6 +12,7 @@ offset_left = -2.0
 offset_top = 357.0
 offset_right = 757.7015
 offset_bottom = 792.8209
+record_code = "M"
 
 [node name="Inventory" parent="." unique_id=1037336950 instance=ExtResource("3_lquwl")]
 

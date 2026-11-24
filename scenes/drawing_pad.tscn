@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b470ecygadt01"]
 
-[ext_resource type="Script" uid="uid://dy2c18w2efah7" path="res://drawing_pad.gd" id="1_x367w"]
-[ext_resource type="PackedScene" uid="uid://beqcjunkseu5m" path="res://component_card.tscn" id="2_wqv57"]
+[ext_resource type="Script" uid="uid://dy2c18w2efah7" path="res://script/drawing_pad.gd" id="1_x367w"]
+[ext_resource type="PackedScene" uid="uid://beqcjunkseu5m" path="res://scenes/component_card.tscn" id="2_wqv57"]
 
 [node name="DrawingPad" type="Control" unique_id=1888209856]
 custom_minimum_size = Vector2(400, 400)

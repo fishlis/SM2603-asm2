@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ddoh5m332l57h"]
 
-[ext_resource type="Script" uid="uid://dxq1qypxury3j" path="res://item_slot.gd" id="1_ki15f"]
-[ext_resource type="Script" uid="uid://bg68keqe78hq0" path="res://category_grid.gd" id="1_nwt7c"]
+[ext_resource type="Script" uid="uid://dxq1qypxury3j" path="res://script/item_slot.gd" id="1_ki15f"]
+[ext_resource type="Script" uid="uid://bg68keqe78hq0" path="res://script/category_grid.gd" id="1_nwt7c"]
 [ext_resource type="Texture2D" uid="uid://j1lgb6kxie7p" path="res://Testing Assets/Icon1.png" id="2_nwt7c"]
 
 [node name="Inventory" type="Node" unique_id=1037336950]
