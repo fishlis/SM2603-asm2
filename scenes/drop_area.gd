@@ -7,8 +7,9 @@ func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 	
 func _drop_data(at_position: Vector2, data: Variant) -> void:
 	var items: Array = data.get("ingredients", [])
+	var dropped_cup_type: String = str(data.get("cup_type", "cup")).strip_edges().to_lower()
 	if zombie and zombie.has_method("check_cup"):
-		var matched: bool = zombie.check_cup(items)
+		var matched: bool = zombie.check_cup(items, dropped_cup_type)
 		if matched:
 			var cup = data.get("cup")
 			if cup and cup.has_method("reset_cup"):

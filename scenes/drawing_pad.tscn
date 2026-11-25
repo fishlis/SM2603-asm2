@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://beqcjunkseu5m" path="res://scenes/component_card.tscn" id="2_wqv57"]
 [ext_resource type="Script" uid="uid://bgm16lokgevvy" path="res://scenes/cup_slot.gd" id="3_3rvac"]
 [ext_resource type="Texture2D" uid="uid://ck2iamaci1fjx" path="res://assets/coffee_icons/cup.png" id="4_aprco"]
+[ext_resource type="Texture2D" uid="uid://7ikn5rv2wfx4" path="res://assets/coffee_icons/coffee_togo.png" id="5_aprco"]
 
 [node name="DrawingPad" type="Control" unique_id=1888209856]
 custom_minimum_size = Vector2(400, 400)
@@ -85,6 +86,34 @@ mouse_filter = 2
 texture = ExtResource("4_aprco")
 
 [node name="CupLabel" type="Label" parent="CupSlot" unique_id=1144274387]
+layout_mode = 0
+offset_top = -11.940308
+offset_right = 86.56716
+offset_bottom = 23.0
+
+[node name="TogoSlot" type="Panel" parent="." unique_id=2090918549]
+layout_mode = 0
+offset_left = 286.56714
+offset_top = -191.04478
+offset_right = 564.1791
+offset_bottom = 38.50746
+script = ExtResource("3_3rvac")
+cup_type = "togo"
+
+[node name="TextureRect" type="TextureRect" parent="TogoSlot" unique_id=2110646624]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.869
+offset_left = 62.686577
+offset_top = 38.80598
+offset_right = 45.074677
+offset_bottom = 111.32506
+scale = Vector2(0.59, 0.59)
+mouse_filter = 2
+texture = ExtResource("5_aprco")
+
+[node name="TogoLabel" type="Label" parent="TogoSlot" unique_id=540335093]
 layout_mode = 0
 offset_top = -11.940308
 offset_right = 86.56716

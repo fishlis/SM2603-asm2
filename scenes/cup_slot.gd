@@ -1,5 +1,7 @@
 extends Panel
 
+@export var cup_type: String = "cup"
+
 @onready var cup_icon: TextureRect = $CupIcon
 @onready var cup_label: Label = $CupLabel
 
@@ -42,6 +44,7 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 	return{
 		"type": "cup",
 		"cup": self,
+		"cup_type": cup_type.strip_edges().to_lower(),
 		"ingredients": items
 	}
 

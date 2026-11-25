@@ -28,11 +28,23 @@ func _process(delta: float) -> void:
 	if remaining_time <= 0.0:
 		order_failed()
 
-func check_cup(items: Array) -> bool:
+func check_cup(items: Array, cup_type: String = "cup") -> bool:
 	if order_overlay == null:
 		return false
 		
 	var order_id: String = str(order_overlay.current_order_id)
+	var required_cup_type: String = str(order_overlay.current_order_cup_type).strip_edges().to_lower()
+	
+	if required_cup_type == "":
+		if order_id.ends_with("_togo"):
+			required_cup_type = "togo"
+			
+		else:
+			required_cup_type = "cup"
+			
+	if cup_type != required_cup_type:
+		print("wrong cup type! got:", cup_type, "expected: ", required_cup_type)
+		return false
 	
 	var has_coffee = "Coffee" in items
 	var has_milk = "Milk" in items or "Oat Milk" in items
@@ -63,7 +75,7 @@ func check_cup(items: Array) -> bool:
 		drinkOrder()
 		return true
 	else:
-		print("not match", items)
+		print("not match", items, "cup_type:", cup_type)
 		return false
 	
 func drinkOrder() -> void:
