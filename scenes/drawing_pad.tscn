@@ -93,10 +93,10 @@ offset_bottom = 23.0
 
 [node name="TogoSlot" type="Panel" parent="." unique_id=2090918549]
 layout_mode = 0
-offset_left = 286.56714
-offset_top = -191.04478
-offset_right = 564.1791
-offset_bottom = 38.50746
+offset_left = 302.98508
+offset_top = -192.5373
+offset_right = 580.59705
+offset_bottom = 37.014954
 script = ExtResource("3_3rvac")
 cup_type = "togo"
 
