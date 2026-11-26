@@ -2101,10 +2101,9 @@ patch_margin_bottom = 270
 [node name="DropArea" type="Control" parent="." unique_id=896745568]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -300.0
-offset_top = -350.0
-offset_right = -50.0
-offset_bottom = -100.0
+offset_left = -50.0
+offset_top = -150.0
+offset_right = 50.0
 script = ExtResource("13_u6hpf")
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

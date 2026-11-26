@@ -56,7 +56,6 @@ offset_left = 637.0
 offset_top = 356.0
 offset_right = 1396.7014
 offset_bottom = 791.8208
-record_code = "M"
 
 [connection signal="timeout" from="ZombieTimer" to="." method="_on_zombie_timer_timeout"]
 [connection signal="ingredient_added" from="DrawingPad" to="." method="_on_drawing_pad_ingredient_added"]
