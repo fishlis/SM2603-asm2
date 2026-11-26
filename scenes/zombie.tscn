@@ -2053,6 +2053,7 @@ offset_left = -280.99057
 offset_top = -327.68353
 offset_right = -54.128967
 offset_bottom = -127.59393
+mouse_filter = 2
 texture = ExtResource("10_iblsu")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
@@ -2070,6 +2071,7 @@ offset_bottom = 231.02856
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.31, 0.31)
+mouse_filter = 2
 texture = ExtResource("11_ida1p")
 expand_mode = 5
 stretch_mode = 5
@@ -2098,12 +2100,12 @@ patch_margin_top = 125
 patch_margin_right = 125
 patch_margin_bottom = 270
 
-[node name="DropArea" type="Control" parent="." unique_id=896745568]
-layout_mode = 3
-anchors_preset = 0
-offset_left = -50.0
-offset_top = -150.0
-offset_right = 50.0
+[node name="DropArea" type="Control" parent="OrderOverlay" unique_id=896745568]
+layout_mode = 0
+offset_left = -280.99057
+offset_top = -327.68353
+offset_right = -54.128967
+offset_bottom = -127.59393
 script = ExtResource("13_u6hpf")
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
