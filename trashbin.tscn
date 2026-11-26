@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://xe20suxtoovv"]
+
+[ext_resource type="Texture2D" uid="uid://by7ai7yaxyc6" path="res://assets/trash_can.png" id="1_00xxq"]
+[ext_resource type="Script" uid="uid://c04b45040t18l" path="res://trash_can.gd" id="2_trash"]
+
+[node name="trashbin" type="Control" unique_id=1702930833]
+custom_minimum_size = Vector2(285, 285)
+offset_right = 285.0
+offset_bottom = 285.0
+script = ExtResource("2_trash")
+
+[node name="TrashCan" type="TextureRect" parent="." unique_id=1978327823]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_00xxq")
+expand_mode = 1
+stretch_mode = 5
