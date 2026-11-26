@@ -21,7 +21,7 @@ scale = Vector2(0.67, 0.67)
 script = ExtResource("1_x367w")
 component_scene = ExtResource("2_wqv57")
 threshold = 15.0
-record_code = "K"
+record_code = "I"
 
 [node name="Canvas" type="Panel" parent="." unique_id=224659663]
 layout_mode = 1
