@@ -7,7 +7,7 @@ extends Panel
 @export var animated_text_scene: PackedScene
 ## The ingredients that play an animation above the cup. Every entry is the
 ## name of the ingredient, for example "Coffee" or "Water".
-@export var animated_ingredients: Array[String] = ["Coffee", "Water", "Milk", "Vanilla Syrup", "Caramel Syrup"]
+@export var animated_ingredients: Array[String] = ["Coffee", "Water", "Milk", "Vanilla Syrup", "Caramel Syrup", "Hazelnut Syrup"]
 
 @onready var cup_icon: TextureRect = _get_first_child(["CupIcon", "TextureRect"], "TextureRect") as TextureRect
 @onready var cup_label: Label = _get_first_child(["CupLabel", "TogoLabel"], "Label") as Label
