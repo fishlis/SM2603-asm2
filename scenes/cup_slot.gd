@@ -5,8 +5,9 @@ extends Panel
 ## The animated text scene that pops up above the cup when an ingredient is
 ## added. Leave empty to disable it.
 @export var animated_text_scene: PackedScene
-## The name of the ingredient that plays the "coffee" animation.
-@export var coffee_animated_text: String = "Coffee"
+## The ingredients that play an animation above the cup. Every entry is the
+## name of the ingredient, for example "Coffee" or "Water".
+@export var animated_ingredients: Array[String] = ["Coffee", "Water"]
 
 @onready var cup_icon: TextureRect = _get_first_child(["CupIcon", "TextureRect"], "TextureRect") as TextureRect
 @onready var cup_label: Label = _get_first_child(["CupLabel", "TogoLabel"], "Label") as Label
@@ -110,8 +111,10 @@ func update_cup_text() -> void:
 func _play_animated_text(item_name: String) -> void:
 	if animated_text == null or item_name == "":
 		return
-	# Only the coffee animation exists so far, other ingredients stay quiet.
-	if item_name != coffee_animated_text:
+	# Only the ingredients that have an animation play one.
+	if not (item_name in animated_ingredients):
 		return
-	if animated_text.has_method("play"):
+	if animated_text.has_method("play_for"):
+		animated_text.play_for(item_name)
+	elif animated_text.has_method("play"):
 		animated_text.play()

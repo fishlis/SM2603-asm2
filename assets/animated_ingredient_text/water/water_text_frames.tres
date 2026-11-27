@@ -1,0 +1,131 @@
+[gd_resource type="SpriteFrames" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_000.png" id="1_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_001.png" id="2_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_002.png" id="3_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_003.png" id="4_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_004.png" id="5_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_005.png" id="6_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_006.png" id="7_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_007.png" id="8_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_008.png" id="9_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_009.png" id="10_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_010.png" id="11_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_011.png" id="12_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_012.png" id="13_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_013.png" id="14_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_014.png" id="15_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_015.png" id="16_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_016.png" id="17_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_017.png" id="18_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_018.png" id="19_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_019.png" id="20_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_020.png" id="21_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_021.png" id="22_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_022.png" id="23_wtr"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/water/frame_023.png" id="24_wtr"]
+
+[resource]
+animations = [{
+"frames": [
+{
+"duration": 1.0,
+"texture": ExtResource("1_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("2_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("3_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("4_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("5_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("6_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("7_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("8_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("9_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("10_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("11_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("12_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("13_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("14_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("15_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("16_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("17_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("18_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("19_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("20_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("21_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("22_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("23_wtr")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("24_wtr")
+}
+],
+"loop": 0,
+"name": &"default",
+"speed": 24.0
+}]

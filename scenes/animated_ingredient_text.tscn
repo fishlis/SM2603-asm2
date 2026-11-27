@@ -1,20 +1,33 @@
 [gd_scene format=3]
 
 [ext_resource type="Script" path="res://scenes/animated_ingredient_text.gd" id="1_anim"]
-[ext_resource type="SpriteFrames" path="res://assets/animated_ingredient_text/coffee/coffee_text_frames.tres" id="2_frames"]
+[ext_resource type="SpriteFrames" path="res://assets/animated_ingredient_text/coffee/coffee_text_frames.tres" id="2_coffee"]
+[ext_resource type="SpriteFrames" path="res://assets/animated_ingredient_text/water/water_text_frames.tres" id="3_water"]
 
 [node name="AnimatedIngredientText" type="Control"]
-custom_minimum_size = Vector2(220, 78)
+custom_minimum_size = Vector2(0, 0)
 offset_right = 220.0
-offset_bottom = 78.0
+offset_bottom = 95.0
 mouse_filter = 2
 script = ExtResource("1_anim")
-sprite_frames = ExtResource("2_frames")
+sprite_frames = ExtResource("2_coffee")
+ink_rect = Rect2(0, 23, 641, 163)
 target_width = 220.0
 cup_gap = 2.0
-ink_rect = Rect2(1, 24, 637, 160)
+ingredient_animations = {
+"Coffee": {
+"frames": ExtResource("2_coffee"),
+"ink_rect": Rect2(0, 23, 641, 163),
+"target_width": 220.0
+},
+"Water": {
+"frames": ExtResource("3_water"),
+"ink_rect": Rect2(0, 26, 640, 201),
+"target_width": 220.0
+}
+}
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 centered = true
-position = Vector2(110, 39)
-sprite_frames = ExtResource("2_frames")
+position = Vector2(110, 47.5)
+sprite_frames = ExtResource("2_coffee")
