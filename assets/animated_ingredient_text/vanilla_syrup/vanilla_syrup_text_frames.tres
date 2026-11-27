@@ -1,0 +1,107 @@
+[gd_resource type="SpriteFrames" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_000.png" id="1_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_001.png" id="2_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_002.png" id="3_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_003.png" id="4_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_004.png" id="5_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_005.png" id="6_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_006.png" id="7_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_007.png" id="8_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_008.png" id="9_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_009.png" id="10_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_010.png" id="11_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_011.png" id="12_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_012.png" id="13_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_013.png" id="14_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_014.png" id="15_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_015.png" id="16_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_016.png" id="17_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_017.png" id="18_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_018.png" id="19_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_019.png" id="20_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_020.png" id="21_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_021.png" id="22_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_022.png" id="23_van"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/vanilla_syrup/frame_023.png" id="24_van"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_van")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_van")
+}
+],
+"loop": 0,
+"name": &"default",
+"speed": 24.0
+}]

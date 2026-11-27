@@ -4,6 +4,7 @@
 [ext_resource type="SpriteFrames" path="res://assets/animated_ingredient_text/coffee/coffee_text_frames.tres" id="2_coffee"]
 [ext_resource type="SpriteFrames" path="res://assets/animated_ingredient_text/water/water_text_frames.tres" id="3_water"]
 [ext_resource type="SpriteFrames" path="res://assets/animated_ingredient_text/milk/milk_text_frames.tres" id="4_milk"]
+[ext_resource type="SpriteFrames" path="res://assets/animated_ingredient_text/vanilla_syrup/vanilla_syrup_text_frames.tres" id="5_vanilla"]
 
 [node name="AnimatedIngredientText" type="Control"]
 custom_minimum_size = Vector2(0, 0)
@@ -29,6 +30,11 @@ ingredient_animations = {
 "Milk": {
 "frames": ExtResource("4_milk"),
 "ink_rect": Rect2(1, 34, 637, 275),
+"target_width": 220.0
+},
+"Vanilla Syrup": {
+"frames": ExtResource("5_vanilla"),
+"ink_rect": Rect2(1, 25, 640, 173),
 "target_width": 220.0
 }
 }
