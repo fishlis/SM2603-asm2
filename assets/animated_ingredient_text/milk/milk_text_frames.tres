@@ -1,0 +1,107 @@
+[gd_resource type="SpriteFrames" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_000.png" id="1_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_001.png" id="2_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_002.png" id="3_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_003.png" id="4_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_004.png" id="5_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_005.png" id="6_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_006.png" id="7_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_007.png" id="8_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_008.png" id="9_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_009.png" id="10_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_010.png" id="11_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_011.png" id="12_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_012.png" id="13_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_013.png" id="14_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_014.png" id="15_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_015.png" id="16_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_016.png" id="17_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_017.png" id="18_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_018.png" id="19_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_019.png" id="20_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_020.png" id="21_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_021.png" id="22_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_022.png" id="23_mlk"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/milk/frame_023.png" id="24_mlk"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_mlk")
+}
+],
+"loop": 0,
+"name": &"default",
+"speed": 24.0
+}]
