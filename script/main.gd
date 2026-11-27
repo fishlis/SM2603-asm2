@@ -1,6 +1,13 @@
 extends Node2D
 @export var zombie_scene: PackedScene
 @export var zombie_speed: float = 20.0
+@export var zombie_spacing: float = 110
+@export var bubble_stagger_y: float = 8
+@export var max_zombies: int =3
+@export var slot_spacing_x: float = 150
+@export var stop_x: float = 300
+@export var stop_y_offset: float = 160
+
 var score
 
 # Zombies are drawn inside this z_index band so they always stay behind the
@@ -10,6 +17,7 @@ const ZOMBIE_Z_MAX := -20
 
 # The zombies in the order they spawned. The newest zombie is drawn in front.
 var _zombie_order: Array = []
+var _bubble_base_y: float = -120
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,7 +25,24 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	var alive: Array = []
+	for z in _zombie_order:
+		if is_instance_valid(z) and not z.is_queued_for_deletion():
+			alive.append(z)
+	_zombie_order = alive
+	
+	var target_y = $ZombieSpawnPoint.position.y + stop_y_offset
+	
+	for i in range(_zombie_order.size()):
+		var z = _zombie_order[i]
+		var target_x = stop_x+i*slot_spacing_x
+		var target_pos = Vector2(target_x, target_y)
+		if z is RigidBody2D and z.position.x <= target_x:
+			z.linear_velocity = Vector2.ZERO
+			
+		z.position = z.position.move_toward(target_pos, zombie_speed * delta)
+		
+		
 
 
 func _on_drawing_pad_ingredient_added(category: String, item_name: String, item_color: Color, item_icon: Texture2D) -> void:
@@ -27,6 +52,8 @@ func _on_drawing_pad_ingredient_added(category: String, item_name: String, item_
 
 
 func _on_zombie_timer_timeout() -> void:
+	if _zombie_order.size() >= max_zombies:
+		return
 	# Create a new instance of the Mob scene.
 	var zombie = zombie_scene.instantiate()
 
@@ -34,16 +61,19 @@ func _on_zombie_timer_timeout() -> void:
 	var zombie_spawn_location = $ZombieSpawnPoint
 	# Set the mob's position to the random location.
 	zombie.position = zombie_spawn_location.position
-
+	
+	
+	
 	# Set the mob's direction perpendicular to the path direction.
-	var direction = zombie_spawn_location.rotation + PI / 2
+	var direction = zombie_spawn_location.rotation
 
 	# Add some randomness to the direction.
-	direction += randf_range(-PI / 4, PI / 4)
-
-	# Choose the velocity for the mob.
-	var velocity = Vector2(zombie_speed, 0.0)
-	zombie.linear_velocity = velocity.rotated(direction)
+	direction += randf_range(-PI / 32, PI / 32)
+	
+	if zombie is RigidBody2D:
+		# Choose the velocity for the mob.
+		var velocity = Vector2(zombie_speed, 0.0)
+		zombie.linear_velocity = velocity.rotated(direction)
 
 	# Spawn the mob by adding it to the Main scene.
 	# add_child appends the zombie as the LAST child. Godot picks overlapping
@@ -52,6 +82,7 @@ func _on_zombie_timer_timeout() -> void:
 	# drawn in front. That keeps the order bubble the player can see as the
 	# one that actually receives the coffee.
 	add_child(zombie)
+	zombie.tree_exited.connect(_refresh_zombie_z_order)
 	_zombie_order.append(zombie)
 	_refresh_zombie_z_order()
 
@@ -60,20 +91,24 @@ func _on_zombie_timer_timeout() -> void:
 func _refresh_zombie_z_order() -> void:
 	var alive: Array = []
 	for z in _zombie_order:
-		if is_instance_valid(z):
+		if is_instance_valid(z) and not z.is_queued_for_deletion():
 			alive.append(z)
 	_zombie_order = alive
 
 	var count := _zombie_order.size()
-	if count == 0:
-		return
-
 	# The oldest zombie gets the lowest z_index, the newest the highest one,
 	# so the newest zombie is always drawn in front of the queue.
+	if count ==0:
+		return
+		
 	for i in range(count):
 		var z = _zombie_order[i]
-		if count == 1:
-			z.z_index = ZOMBIE_Z_MIN
-		else:
-			var t := float(i) / float(count - 1)
-			z.z_index = int(round(lerp(float(ZOMBIE_Z_MIN), float(ZOMBIE_Z_MAX), t)))
+		
+		var t := 1-(float(i) / float(max(count - 1,1)))
+		z.z_index = int(round(lerp(float(ZOMBIE_Z_MIN), float(ZOMBIE_Z_MAX), t)))
+			
+		var overlay = z.get_node_or_null("OrderOverlay") as Node2D
+		if overlay != null:
+			var offset_index = (count-1) - i
+			overlay.position.x = 0.0
+			overlay.position.y = _bubble_base_y - offset_index * bubble_stagger_y

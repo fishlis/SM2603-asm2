@@ -136,7 +136,8 @@ func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
 	# Refuse when a bubble in front of this one is under the cursor.
 	# Godot does not fall through to the control underneath, so refusing here
 	# is what keeps the order in front.
-	return _is_frontmost_at(get_global_mouse_position())
+	var ok = _is_frontmost_at(get_global_mouse_position())
+	return ok
 
 
 func _drop_data(_at_position: Vector2, data: Variant) -> void:

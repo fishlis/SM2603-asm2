@@ -2006,7 +2006,7 @@ visibility_layer = 2
 scale = Vector2(0.02, 0.02)
 collision_layer = 2
 mass = 0.001
-gravity_scale = 0.0
+gravity_scale = 0.01
 lock_rotation = true
 script = ExtResource("1_ycv6i")
 wait_time = 30.0
@@ -2101,7 +2101,8 @@ patch_margin_right = 125
 patch_margin_bottom = 270
 
 [node name="DropArea" type="Control" parent="OrderOverlay" unique_id=896745568]
-layout_mode = 0
+layout_mode = 3
+anchors_preset = 0
 offset_left = -280.99057
 offset_top = -327.68353
 offset_right = -54.128967
