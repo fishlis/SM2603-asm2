@@ -2,9 +2,15 @@ extends Panel
 
 @export var cup_type: String = "cup"
 @export var empty_text: String = "Empty Cup"
+## The animated text scene that pops up above the cup when an ingredient is
+## added. Leave empty to disable it.
+@export var animated_text_scene: PackedScene
+## The name of the ingredient that plays the "coffee" animation.
+@export var coffee_animated_text: String = "Coffee"
 
 @onready var cup_icon: TextureRect = _get_first_child(["CupIcon", "TextureRect"], "TextureRect") as TextureRect
 @onready var cup_label: Label = _get_first_child(["CupLabel", "TogoLabel"], "Label") as Label
+@onready var animated_text: Control = _get_first_child(["AnimatedText"], "Control") as Control
 
 var slots_by_category := {
 	"coffee": "",
@@ -15,6 +21,16 @@ var slots_by_category := {
 
 func _ready() -> void:
 	update_cup_text()
+	_align_animated_text()
+
+
+## Keeps the animated text centered on the cup and sitting just above its rim.
+func _align_animated_text() -> void:
+	if animated_text == null or cup_icon == null:
+		return
+	if animated_text.has_method("align_above"):
+		animated_text.align_above(cup_icon)
+
 
 func _get_first_child(names: Array, class_hint: String) -> Node:
 	for n in names:
@@ -49,6 +65,7 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 			slots_by_category["coffee"] = item_name
 
 	update_cup_text()
+	_play_animated_text(item_name)
 
 func _get_drag_data(_at_position: Vector2) -> Variant:
 	var items := get_ingredients_list()
@@ -87,3 +104,14 @@ func update_cup_text() -> void:
 		cup_label.text = empty_text
 	else:
 		cup_label.text = "\n".join(items)
+
+
+# Plays the animated text above the cup for the ingredient that was added.
+func _play_animated_text(item_name: String) -> void:
+	if animated_text == null or item_name == "":
+		return
+	# Only the coffee animation exists so far, other ingredients stay quiet.
+	if item_name != coffee_animated_text:
+		return
+	if animated_text.has_method("play"):
+		animated_text.play()

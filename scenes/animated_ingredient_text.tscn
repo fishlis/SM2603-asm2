@@ -1,0 +1,20 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/animated_ingredient_text.gd" id="1_anim"]
+[ext_resource type="SpriteFrames" path="res://assets/animated_ingredient_text/coffee/coffee_text_frames.tres" id="2_frames"]
+
+[node name="AnimatedIngredientText" type="Control"]
+custom_minimum_size = Vector2(220, 78)
+offset_right = 220.0
+offset_bottom = 78.0
+mouse_filter = 2
+script = ExtResource("1_anim")
+sprite_frames = ExtResource("2_frames")
+target_width = 220.0
+cup_gap = 2.0
+ink_rect = Rect2(1, 24, 637, 160)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+centered = true
+position = Vector2(110, 39)
+sprite_frames = ExtResource("2_frames")

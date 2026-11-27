@@ -1,0 +1,106 @@
+[gd_resource type="SpriteFrames" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_000.png" id="1_2e7e8"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_001.png" id="2_8b8n4"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_002.png" id="3_37kq2"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_003.png" id="4_k4noo"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_004.png" id="5_vx7pw"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_005.png" id="6_fgqd4"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_006.png" id="7_cx3xo"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_007.png" id="8_vrw34"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_008.png" id="9_lkeqm"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_009.png" id="10_0rspu"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_010.png" id="11_np2g8"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_011.png" id="12_2stu5"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_012.png" id="13_etf3r"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_013.png" id="14_1u5u4"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_014.png" id="15_fmef8"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_015.png" id="16_ns4d2"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_016.png" id="17_7au12"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_017.png" id="18_hsvt4"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_018.png" id="19_qu8ja"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_019.png" id="20_aifri"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_020.png" id="21_ns083"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_021.png" id="22_gcx1t"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_022.png" id="23_dj8tb"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/coffee/frame_023.png" id="24_lhmxj"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2e7e8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8b8n4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_37kq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_k4noo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vx7pw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fgqd4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cx3xo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vrw34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_lkeqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0rspu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_np2g8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2stu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_etf3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_1u5u4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_fmef8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ns4d2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_7au12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_hsvt4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qu8ja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_aifri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ns083")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_gcx1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_dj8tb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_lhmxj")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 24.0
+}]
