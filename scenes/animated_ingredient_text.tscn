@@ -8,6 +8,7 @@
 [ext_resource type="SpriteFrames" path="res://assets/animated_ingredient_text/caramel_syrup/caramel_syrup_text_frames.tres" id="6_caramel"]
 [ext_resource type="SpriteFrames" path="res://assets/animated_ingredient_text/hazelnut_syrup/hazelnut_syrup_text_frames.tres" id="7_hazelnut"]
 [ext_resource type="SpriteFrames" path="res://assets/animated_ingredient_text/chocolate/chocolate_text_frames.tres" id="8_chocolate"]
+[ext_resource type="SpriteFrames" path="res://assets/animated_ingredient_text/ice/ice_text_frames.tres" id="9_ice"]
 
 [node name="AnimatedIngredientText" type="Control"]
 custom_minimum_size = Vector2(0, 0)
@@ -54,6 +55,11 @@ ingredient_animations = {
 "frames": ExtResource("8_chocolate"),
 "ink_rect": Rect2(1, 20, 640, 123),
 "target_width": 220.0
+},
+"Ice": {
+"frames": ExtResource("9_ice"),
+"ink_rect": Rect2(2, 52, 553, 364),
+"target_width": 85.4
 }
 }
 

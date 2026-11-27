@@ -1,0 +1,107 @@
+[gd_resource type="SpriteFrames" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_000.png" id="1_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_001.png" id="2_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_002.png" id="3_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_003.png" id="4_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_004.png" id="5_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_005.png" id="6_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_006.png" id="7_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_007.png" id="8_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_008.png" id="9_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_009.png" id="10_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_010.png" id="11_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_011.png" id="12_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_012.png" id="13_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_013.png" id="14_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_014.png" id="15_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_015.png" id="16_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_016.png" id="17_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_017.png" id="18_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_018.png" id="19_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_019.png" id="20_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_020.png" id="21_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_021.png" id="22_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_022.png" id="23_ice"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/ice/frame_023.png" id="24_ice"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ice")
+}
+],
+"loop": 0,
+"name": &"default",
+"speed": 24.0
+}]
