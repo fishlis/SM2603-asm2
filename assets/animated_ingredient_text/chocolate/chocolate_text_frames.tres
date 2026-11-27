@@ -1,0 +1,107 @@
+[gd_resource type="SpriteFrames" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_000.png" id="1_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_001.png" id="2_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_002.png" id="3_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_003.png" id="4_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_004.png" id="5_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_005.png" id="6_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_006.png" id="7_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_007.png" id="8_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_008.png" id="9_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_009.png" id="10_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_010.png" id="11_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_011.png" id="12_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_012.png" id="13_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_013.png" id="14_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_014.png" id="15_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_015.png" id="16_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_016.png" id="17_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_017.png" id="18_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_018.png" id="19_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_019.png" id="20_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_020.png" id="21_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_021.png" id="22_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_022.png" id="23_choc"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/chocolate/frame_023.png" id="24_choc"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_choc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_choc")
+}
+],
+"loop": 0,
+"name": &"default",
+"speed": 24.0
+}]
