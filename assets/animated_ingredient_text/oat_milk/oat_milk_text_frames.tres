@@ -1,0 +1,107 @@
+[gd_resource type="SpriteFrames" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_000.png" id="1_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_001.png" id="2_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_002.png" id="3_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_003.png" id="4_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_004.png" id="5_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_005.png" id="6_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_006.png" id="7_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_007.png" id="8_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_008.png" id="9_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_009.png" id="10_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_010.png" id="11_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_011.png" id="12_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_012.png" id="13_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_013.png" id="14_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_014.png" id="15_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_015.png" id="16_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_016.png" id="17_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_017.png" id="18_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_018.png" id="19_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_019.png" id="20_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_020.png" id="21_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_021.png" id="22_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_022.png" id="23_oat"]
+[ext_resource type="Texture2D" path="res://assets/animated_ingredient_text/oat_milk/frame_023.png" id="24_oat"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_oat")
+}
+],
+"loop": 0,
+"name": &"default",
+"speed": 24.0
+}]
