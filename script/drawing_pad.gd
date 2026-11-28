@@ -42,7 +42,7 @@ func _gui_input(event: InputEvent) -> void:
 		if event.pressed:
 			current_line = Line2D.new()
 			current_line.width = 6.0
-			current_line.default_color = Color.WHITE
+			current_line.default_color = Color.BLUE
 			$Canvas.add_child(current_line)
 			add_pt(event.position)
 		else:
