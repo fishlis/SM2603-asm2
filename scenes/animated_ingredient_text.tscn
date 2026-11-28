@@ -1,6 +1,6 @@
 [gd_scene format=3]
 
-[ext_resource type="Script" path="res://scenes/animated_ingredient_text.gd" id="1_anim"]
+[ext_resource type="Script" uid="uid://b48mbhxice7t0" path="res://script/animated_ingredient_text.gd" id="1_anim"]
 [ext_resource type="SpriteFrames" path="res://assets/animated_ingredient_text/coffee/coffee_text_frames.tres" id="2_coffee"]
 [ext_resource type="SpriteFrames" path="res://assets/animated_ingredient_text/water/water_text_frames.tres" id="3_water"]
 [ext_resource type="SpriteFrames" path="res://assets/animated_ingredient_text/milk/milk_text_frames.tres" id="4_milk"]

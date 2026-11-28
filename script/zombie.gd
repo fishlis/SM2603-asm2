@@ -10,12 +10,18 @@ extends RigidBody2D
 #ORDER Variables
 @export var wait_time: float = 15.0
 var remaining_time: float
+var zombie_type := ""
+var is_leaving = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var zombie_types = Array($AnimatedSprite2D.sprite_frames.get_animation_names())
-	$AnimatedSprite2D.animation = zombie_types.pick_random()
-	$AnimatedSprite2D.play()
+	var characters = ["boy1", "boy2", "girl1", "girl2"]
 	
+	zombie_type = characters.pick_random()
+
+	$AnimatedSprite2D.animation = zombie_type + "_walk_in"
+	$AnimatedSprite2D.play()
+
 	remaining_time = wait_time
 	patience_bar.max_value = 100.0
 	patience_bar.value = 100.0
@@ -79,11 +85,17 @@ func check_cup(items: Array, cup_type: String = "cup") -> bool:
 		return false
 	
 func drinkOrder() -> void:
-	print("Order complted!")
-	queue_free()
+	print("Order completed!")
+	zombieLeaving()
 
 func order_failed() -> void:
-	queue_free()
 	print("Failed Order!")
+	zombieLeaving()
 	
+func zombieLeaving() -> void:
+	is_leaving = true
 	
+	patience_bar.hide()
+	order_overlay.hide()
+	$AnimatedSprite2D.animation = zombie_type + "_walk_out"
+	$AnimatedSprite2D.play()

@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://b2p11o4c8u0ys"]
+
+[ext_resource type="Script" uid="uid://cjmqvbd2dpavr" path="res://script/main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://b470ecygadt01" path="res://scenes/drawing_pad.tscn" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://bq864ut1vvbh6" path="res://assets/Background.png" id="2_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://1anc16fj70pe" path="res://scenes/zombie.tscn" id="2_tefeu"]
+[ext_resource type="PackedScene" uid="uid://ddoh5m332l57h" path="res://scenes/Inventory.tscn" id="3_lquwl"]
+[ext_resource type="Texture2D" uid="uid://cp4gqj6ujval7" path="res://assets/Basic_bar_2048.png" id="3_tefeu"]
+[ext_resource type="PackedScene" uid="uid://xe20suxtoovv" path="res://trashbin.tscn" id="8_trashbin"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3h1l"]
+size = Vector2(2064.892, 263.4975)
+
+[node name="Main" type="Node2D" unique_id=274516228]
+script = ExtResource("1_h2yge")
+zombie_scene = ExtResource("2_tefeu")
+zombie_speed = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1910318512]
+z_index = -60
+offset_left = -9.0
+offset_top = -17.0
+offset_right = 1169.023
+offset_bottom = 474.0
+texture = ExtResource("2_tbgi4")
+expand_mode = 1
+
+[node name="Inventory" parent="." unique_id=1037336950 instance=ExtResource("3_lquwl")]
+
+[node name="ZombieSpawnPoint" type="Marker2D" parent="." unique_id=57618132]
+visibility_layer = 2
+position = Vector2(388, 279)
+
+[node name="ZombieTimer" type="Timer" parent="." unique_id=1176301762]
+wait_time = 20.0
+autostart = true
+
+[node name="BarOverlay" type="StaticBody2D" parent="." unique_id=1784212814]
+visibility_layer = 2
+position = Vector2(571, 478.00003)
+scale = Vector2(0.60342145, 0.6034215)
+collision_mask = 2
+
+[node name="ImgTexture" type="Sprite2D" parent="BarOverlay" unique_id=1564976514]
+scale = Vector2(1.0000002, 1)
+texture = ExtResource("3_tefeu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BarOverlay" unique_id=1777524163]
+position = Vector2(-3.314392, 9.943298)
+scale = Vector2(1.0000005, 1)
+shape = SubResource("RectangleShape2D_r3h1l")
+
+[node name="DrawingPad" parent="." unique_id=1888209856 instance=ExtResource("2_1bvp3")]
+visibility_layer = 2
+z_index = 2
+offset_left = 637.0
+offset_top = 356.0
+offset_right = 1396.7014
+offset_bottom = 791.8208
+
+[node name="TrashCan" parent="." unique_id=1896474509 instance=ExtResource("8_trashbin")]
+z_index = 3
+layout_mode = 3
+anchors_preset = 0
+offset_left = -37.5
+offset_top = 436.5
+offset_right = 247.5
+offset_bottom = 721.5
+
+[connection signal="timeout" from="ZombieTimer" to="." method="_on_zombie_timer_timeout"]
+[connection signal="ingredient_added" from="DrawingPad" to="." method="_on_drawing_pad_ingredient_added"]

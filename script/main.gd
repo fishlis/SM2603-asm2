@@ -35,13 +35,23 @@ func _process(delta: float) -> void:
 	
 	for i in range(_zombie_order.size()):
 		var z = _zombie_order[i]
-		var target_x = stop_x+i*slot_spacing_x
+
+		if z.is_leaving:
+			z.position = z.position.move_toward($ZombieSpawnPoint.position, zombie_speed * delta)
+
+			if z.position.distance_to($ZombieSpawnPoint.position) < 5:
+				z.queue_free()
+
+			continue
+
+		var target_x = stop_x + i * slot_spacing_x
 		var target_pos = Vector2(target_x, target_y)
+
 		if z is RigidBody2D and z.position.x <= target_x:
 			z.linear_velocity = Vector2.ZERO
-			
+
 		z.position = z.position.move_toward(target_pos, zombie_speed * delta)
-		
+
 		
 
 
@@ -111,4 +121,4 @@ func _refresh_zombie_z_order() -> void:
 		if overlay != null:
 			var offset_index = (count-1) - i
 			overlay.position.x = 0.0
-			overlay.position.y = _bubble_base_y - offset_index * bubble_stagger_y
+			#overlay.position.y = _bubble_base_y - offset_index * bubble_stagger_y
