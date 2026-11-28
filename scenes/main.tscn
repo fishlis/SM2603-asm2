@@ -55,7 +55,7 @@ visibility_layer = 2
 z_index = 2
 offset_left = 637.0
 offset_top = 356.0
-offset_right = 1396.7014
+offset_right = 1150.4329
 offset_bottom = 791.8208
 
 [node name="TrashCan" parent="." unique_id=1896474509 instance=ExtResource("8_trashbin")]

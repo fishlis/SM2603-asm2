@@ -3988,7 +3988,7 @@ height = 336.4585
 [node name="Zombie" type="RigidBody2D" unique_id=1857117241]
 visibility_layer = 2
 scale = Vector2(0.02, 0.02)
-collision_layer = 2
+collision_layer = 4
 mass = 0.001
 gravity_scale = 0.01
 lock_rotation = true

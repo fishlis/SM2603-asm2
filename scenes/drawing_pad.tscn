@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://7ikn5rv2wfx4" path="res://assets/coffee_icons/coffee_togo.png" id="5_aprco"]
 [ext_resource type="PackedScene" path="res://scenes/animated_ingredient_text.tscn" id="6_anim"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o6xl0"]
+
 [node name="DrawingPad" type="Control" unique_id=1888209856]
 custom_minimum_size = Vector2(400, 400)
 layout_mode = 3
@@ -30,23 +32,24 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.64500004
 anchor_bottom = 0.87900007
-offset_right = 169.94028
-offset_bottom = 36.459656
+offset_right = 162.4776
+offset_bottom = 23.026794
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_o6xl0")
 
 [node name="TextureRect" type="TextureRect" parent="Canvas" unique_id=1922768107]
 layout_mode = 0
 offset_left = 7.4626865
-offset_top = -1.4925373
+offset_top = -1.4925537
 offset_right = 476.48288
-offset_bottom = 377.6119
+offset_bottom = 377.61188
 texture = ExtResource("3_pd0h4")
 expand_mode = 1
 
 [node name="Line2D" type="Line2D" parent="." unique_id=1180683425]
-points = PackedVector2Array(432.83582, 353.73132)
+points = PackedVector2Array(883, 387)
 width = 6.0
 begin_cap_mode = 2
 end_cap_mode = 2
@@ -62,26 +65,26 @@ offset_bottom = 623.912
 
 [node name="SubmitButton" type="Button" parent="." unique_id=1292205306]
 layout_mode = 0
-offset_left = 101.492584
+offset_left = 89.55231
 offset_top = 397.0149
-offset_right = 176.05972
+offset_right = 164.11946
 offset_bottom = 431.04474
 text = "Submit"
 
 [node name="ClearButton" type="Button" parent="." unique_id=95249433]
 layout_mode = 0
-offset_left = 13.432844
+offset_left = 1.4925461
 offset_top = 397.0149
-offset_right = 87.05974
+offset_right = 75.11944
 offset_bottom = 432.5373
 text = "Clear"
 
 [node name="CupSlot" type="Panel" parent="." unique_id=608301026]
 layout_mode = 0
-offset_left = 22.38806
-offset_top = -247.7612
-offset_right = 300.0
-offset_bottom = -18.208954
+offset_left = 2.985075
+offset_top = -249.25371
+offset_right = 280.59702
+offset_bottom = -19.701462
 script = ExtResource("3_3rvac")
 
 [node name="TextureRect" type="TextureRect" parent="CupSlot" unique_id=106235568]
@@ -89,14 +92,13 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.869
-offset_left = 62.68656
-offset_top = 64.17911
-offset_right = 17.86148
-offset_bottom = 31.230331
+offset_left = 52.23883
+offset_top = 50.746277
+offset_right = 34.626892
+offset_bottom = 37.265366
 scale = Vector2(0.69, 0.69)
 mouse_filter = 2
 texture = ExtResource("4_aprco")
-expand_mode = 1
 
 [node name="CupLabel" type="Label" parent="CupSlot" unique_id=1144274387]
 layout_mode = 0
@@ -126,10 +128,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.869
-offset_left = 76.11937
-offset_top = 17.91048
-offset_right = 23.652832
-offset_bottom = 137.20906
+offset_left = 74.626884
+offset_top = 15.683716
+offset_right = 6.9820557
+offset_bottom = 143.78166
 scale = Vector2(0.59, 0.59)
 mouse_filter = 2
 texture = ExtResource("5_aprco")
@@ -143,10 +145,10 @@ offset_bottom = 23.0
 [node name="AnimatedText" parent="TogoSlot" unique_id=490930430 instance=ExtResource("6_anim")]
 z_index = 5
 anchors_preset = 0
-offset_left = 47.76117
-offset_top = -2.9850445
-offset_right = 267.76117
-offset_bottom = 75.0462
+offset_left = -1.88854
+offset_top = -26.44402
+offset_right = 218.11147
+offset_bottom = 51.58723
 
 [connection signal="pressed" from="SubmitButton" to="." method="_on_submit_button_pressed"]
 [connection signal="pressed" from="ClearButton" to="." method="_on_clear_button_pressed"]
