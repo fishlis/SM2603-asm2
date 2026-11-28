@@ -33,7 +33,7 @@ visibility_layer = 2
 position = Vector2(388, 279)
 
 [node name="ZombieTimer" type="Timer" parent="." unique_id=1176301762]
-wait_time = 20.0
+wait_time = 5.0
 autostart = true
 
 [node name="BarOverlay" type="StaticBody2D" parent="." unique_id=1784212814]
@@ -68,8 +68,7 @@ offset_top = 436.5
 offset_right = 247.5
 offset_bottom = 721.5
 
-[node name="CountdownTimer" parent="." instance=ExtResource("9_timer")]
-duration = 180.0
+[node name="CountdownTimer" parent="." unique_id=168902207 instance=ExtResource("9_timer")]
 
 [connection signal="timeout" from="ZombieTimer" to="." method="_on_zombie_timer_timeout"]
 [connection signal="ingredient_added" from="DrawingPad" to="." method="_on_drawing_pad_ingredient_added"]
