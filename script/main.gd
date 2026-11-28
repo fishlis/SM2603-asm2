@@ -8,7 +8,9 @@ extends Node2D
 @export var stop_x: float = 300
 @export var stop_y_offset: float = 160
 
-var score
+var score: int = 0
+## True once the round is over. While this is set the game is paused.
+var _game_over: bool = false
 
 # Zombies are drawn inside this z_index band so they always stay behind the
 # background art and the UI, no matter how many of them are alive.
@@ -22,6 +24,12 @@ var _bubble_base_y: float = -120
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_on_zombie_timer_timeout()
+
+	# The countdown timer ends the round when it runs out.
+	var countdown: Node = get_node_or_null("CountdownTimer")
+	if countdown != null:
+		countdown.game_over.connect(_on_game_over)
+		countdown.restart_requested.connect(_on_restart_requested)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -93,6 +101,8 @@ func _on_zombie_timer_timeout() -> void:
 	# one that actually receives the coffee.
 	add_child(zombie)
 	zombie.tree_exited.connect(_refresh_zombie_z_order)
+	if zombie.has_signal("order_completed"):
+		zombie.order_completed.connect(_on_order_completed)
 	_zombie_order.append(zombie)
 	_refresh_zombie_z_order()
 
@@ -122,3 +132,34 @@ func _refresh_zombie_z_order() -> void:
 			var offset_index = (count-1) - i
 			overlay.position.x = 0.0
 			#overlay.position.y = _bubble_base_y - offset_index * bubble_stagger_y
+
+
+## Called when a zombie received a correct order. The score goes up by one.
+func _on_order_completed() -> void:
+	score += 1
+
+
+## Called when the countdown timer reaches 00:00. The round is over, so the
+## game is paused and the game over panel is shown.
+func _on_game_over() -> void:
+	if _game_over:
+		return
+	_game_over = true
+	get_tree().paused = true
+
+	var countdown: Node = get_node_or_null("CountdownTimer")
+	if countdown != null:
+		countdown.show_game_over("Orders completed: %d" % score)
+
+	# The zombies stop moving while the game is paused.
+	for z in _zombie_order:
+		if is_instance_valid(z) and z is RigidBody2D:
+			z.linear_velocity = Vector2.ZERO
+			z.freeze = true
+
+
+## Called when the player presses the restart button on the game over panel.
+## The current scene is reloaded so a fresh round starts with a full clock.
+func _on_restart_requested() -> void:
+	get_tree().paused = false
+	get_tree().reload_current_scene()

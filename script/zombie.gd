@@ -1,5 +1,7 @@
 extends RigidBody2D
 
+## Emitted when this zombie received a correct order.
+signal order_completed
 
 @export var zombie_speed: float = 200.0
 
@@ -86,6 +88,7 @@ func check_cup(items: Array, cup_type: String = "cup") -> bool:
 	
 func drinkOrder() -> void:
 	print("Order completed!")
+	order_completed.emit()
 	zombieLeaving()
 
 func order_failed() -> void:
